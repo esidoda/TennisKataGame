@@ -34,5 +34,31 @@ namespace TennisKata
         }
 
         #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Method to manage tennis game.
+        /// </summary>
+        public void PlayGame()
+        {
+            try
+            {
+                //Display welcome message
+                consoleService.DisplayWelcomeMessage();
+                //Get players name
+                playerA = playerService.SetFirstPlayerName(consoleService.AskForPlayerName("A"));
+                playerB = playerService.SetSecondPlayerName(consoleService.AskForPlayerName("B"), playerA);
+               
+            }
+
+            catch (Exception ex)
+            {
+                consoleService.DisplayMessage(ex.Message);
+            }
+
+
+        }
+        #endregion
     }
 }

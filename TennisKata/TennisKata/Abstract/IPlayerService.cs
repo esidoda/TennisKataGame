@@ -1,4 +1,4 @@
-﻿
+﻿using TennisKata.Models;
 
 namespace TennisKata.Abstract
 {
@@ -7,6 +7,18 @@ namespace TennisKata.Abstract
     /// </summary>
     public interface IPlayerService
     {
-     
+        /// <summary>
+        /// Set first player name.
+        /// </summary>
+        /// <param name="name">The name of the player.</param>
+        /// <returns></returns>
+        Player SetFirstPlayerName(string name);
+
+        /// <summary>
+        /// Set second player name.
+        /// </summary>
+        /// <param name="name">The name of the player.</param>
+        /// <returns></returns>
+        Player SetSecondPlayerName(string name, Player playerA);
     }
 }
