@@ -64,6 +64,7 @@
     <Compile Include="Concrete\ConsoleService.cs" />
     <Compile Include="Concrete\PlayerService.cs" />
     <Compile Include="Concrete\PointService.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="Helpers\ServiceHelper.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Points.cs" />
