@@ -41,5 +41,10 @@ namespace TennisKata.Abstract
         /// Clear the console window.
         /// </summary>
         void Clear();
+
+        /// <summary>
+        /// Wait for user to type.
+        /// </summary>
+        void WaitForInput();
     }
 }

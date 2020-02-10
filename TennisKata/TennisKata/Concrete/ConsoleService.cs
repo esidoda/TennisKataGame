@@ -85,5 +85,13 @@ Welcome to Tennis Game
         {
             Console.Clear();
         }
+
+        /// <summary>
+        /// Implements the method <see cref="WaitForInput()"/> of interface.
+        /// </summary>
+        public void WaitForInput()
+        {
+            Console.ReadLine();
+        }
     }
 }
