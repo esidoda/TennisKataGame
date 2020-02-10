@@ -20,5 +20,13 @@ namespace TennisKata.Abstract
         /// <param name="name">The name of the player.</param>
         /// <returns></returns>
         Player SetSecondPlayerName(string name, Player playerA);
+
+        /// <summary>
+        /// Gets the player object of the winner of the game.
+        /// </summary>
+        /// <param name="playerA"></param>
+        /// <param name="playerB"></param>
+        /// <returns></returns>
+        Player GetGameWinnerPlayer(Player playerA, Player playerB);
     }
 }

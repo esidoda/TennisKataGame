@@ -60,6 +60,17 @@ namespace TennisKata
                     //Get point winner player name and display it
                     string pointWinnerName = pointService.GetPointWinnerName(playerA, playerB);
                     consoleService.DisplayMessage($"{pointWinnerName} won the point");
+                    //Update player points points
+                    pointService.UpdatePlayerPoints(playerA, playerB, pointWinnerName);
+
+                    //Get Winner Player
+                    Player winner = playerService.GetGameWinnerPlayer(playerA, playerB);
+                    if (winner != null)
+                    {
+                        consoleService.Clear();
+                        consoleService.DisplayMessage($"{winner.Name} WINS THE GAME! CONGRATS!");
+                        break;
+                    }
                 }
             }
 
