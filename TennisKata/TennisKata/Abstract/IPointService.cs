@@ -1,4 +1,4 @@
-﻿
+﻿using TennisKata.Models;
 
 namespace TennisKata.Abstract
 {
@@ -7,6 +7,12 @@ namespace TennisKata.Abstract
     /// </summary>
     public interface IPointService
     {
-        
+        /// <summary>
+        /// Gets the name of the player who wins the current point.
+        /// </summary>
+        /// <param name="playerA"></param>
+        /// <param name="playerB"></param>
+        /// <returns></returns>
+        string GetPointWinnerName(Player playerA, Player playerB);
     }
 }

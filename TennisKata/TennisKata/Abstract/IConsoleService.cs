@@ -24,5 +24,22 @@ namespace TennisKata.Abstract
         /// </summary>
         /// <param name="message"></param>
         void DisplayMessage(string message);
+
+        /// <summary>
+        /// Display player points.
+        /// </summary>
+        /// <param name="playerA"></param>
+        /// <param name="playerB"></param>
+        void DisplayPlayersPoints(Player playerA, Player playerB);
+
+        /// <summary>
+        /// Ask user to type any key to play.
+        /// </summary>
+        void AskToPlay();
+
+        /// <summary>
+        /// Clear the console window.
+        /// </summary>
+        void Clear();
     }
 }

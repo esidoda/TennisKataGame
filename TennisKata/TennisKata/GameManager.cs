@@ -49,7 +49,18 @@ namespace TennisKata
                 //Get players name
                 playerA = playerService.SetFirstPlayerName(consoleService.AskForPlayerName("A"));
                 playerB = playerService.SetSecondPlayerName(consoleService.AskForPlayerName("B"), playerA);
-               
+
+                while (true)
+                {
+                    //Display players points, ask them to play
+                    consoleService.DisplayPlayersPoints(playerA, playerB);
+                    consoleService.AskToPlay();
+                    consoleService.Clear();
+
+                    //Get point winner player name and display it
+                    string pointWinnerName = pointService.GetPointWinnerName(playerA, playerB);
+                    consoleService.DisplayMessage($"{pointWinnerName} won the point");
+                }
             }
 
             catch (Exception ex)
